@@ -1,9 +1,12 @@
-package com.mysite.ssb;
+package com.mysite.ssb.answer;
 
 import java.time.LocalDateTime;
 
+import com.mysite.ssb.question.Question;
+
 import jakarta.persistence.Column;
 import jakarta.persistence.Entity;
+import jakarta.persistence.FetchType;
 import jakarta.persistence.GeneratedValue;
 import jakarta.persistence.GenerationType;
 import jakarta.persistence.Id;
@@ -25,7 +28,7 @@ public class Answer {
 	
 	private LocalDateTime createDate; 
 	
-	@ManyToOne
-	private Question question; 
+	@ManyToOne(fetch = FetchType.EAGER)
+	private Question  question; 
 
 }

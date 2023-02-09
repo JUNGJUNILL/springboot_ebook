@@ -1,4 +1,4 @@
-package com.mysite.ssb;
+package com.mysite.ssb.answer;
 
 import org.springframework.data.jpa.repository.JpaRepository;
 import org.springframework.stereotype.Repository;
