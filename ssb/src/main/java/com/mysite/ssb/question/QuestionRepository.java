@@ -2,6 +2,9 @@ package com.mysite.ssb.question;
 
 import java.util.List;
 
+import org.springframework.data.domain.Page;
+import org.springframework.data.domain.Pageable;
+
 import org.springframework.data.jpa.repository.JpaRepository;
 import org.springframework.stereotype.Repository;
 
@@ -38,5 +41,8 @@ public interface QuestionRepository extends JpaRepository<Question,Integer>{
     
     //이번에는 제목에 특정 문자열이 포함되어 있는 데이터를 조회해 보자. Question 리포지터리를 다음과 같이 수정하자.
     List<Question> findBySubjectLike(String subject); 
+    
+    Page<Question> findAll(Pageable pageable);
+
 
 }

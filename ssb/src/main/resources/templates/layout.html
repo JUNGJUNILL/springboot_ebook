@@ -11,8 +11,16 @@
     <title>Hello, sbb!</title>
 </head>
 <body>
+<!-- 네비게이션 바 start navbar.html 템플릿을 타임리프의 th:replace 속성으로 포함시켰다. -->
+<nav th:replace="~{navbar :: navbarFragment}"></nav>
+<!-- 네비게이션 바 end -->
+	
 <!-- 기본 템플릿 안에 삽입될 내용 Start -->
 <th:block layout:fragment="content"></th:block>
 <!-- 기본 템플릿 안에 삽입될 내용 End -->
+
+<!-- Bootstrap JS start -->
+<script th:src="@{/bootstrap.min.js}"></script>
+<!-- Bootstrap JS end -->
 </body>
 </html>
